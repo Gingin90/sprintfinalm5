@@ -3,23 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
-
+    app:startDestination="@id/dashboardFragment">
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.sprintfinalm5.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_secondzap" />
-
-    <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/dashboardFragment"
         android:name="com.example.sprintfinalm5.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_oneshoes" />
-
+        android:label="fragment_oneshoes"
+        tools:layout="@layout/fragment_oneshoes" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/homeFragment"
+        android:name="com.example.sprintfinalm5.ui.home.HomeFragment"
+        android:label="fragment_secondzap"
+        tools:layout="@layout/fragment_secondzap" >
+        <action
+            android:id="@+id/action_homeFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationsFragment"
         android:name="com.example.sprintfinalm5.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_thirdcarrito" />
+        android:label="fragment_thirdcarrito"
+        tools:layout="@layout/fragment_thirdcarrito" >
+        <action
+            android:id="@+id/action_notificationsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

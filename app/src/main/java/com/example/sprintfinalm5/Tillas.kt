@@ -1,8 +1,12 @@
 package com.example.sprintfinalm5
 
-fun returnShoeList(): List<Item> {
-    val shoeList = mutableListOf<Item>()
-    val shoeItem1 = Item("Zapato 1", "https://example.com/zapato1.jpg", 99.99)
+
+class Pokedex {
+    companion object {
+        fun returnShoeList(): List<Zapatilla> {
+            val zapatilla = mutableListOf<Item>()
+
+    val zapatillatem1 = Item("Zapato 1", "https://example.com/zapato1.jpg", 99.99)
     shoeList.add(shoeItem1)
     val shoeItem2 = Item("Zapato 2", "https://example.com/zapato2.jpg", 79.99)
     shoeList.add(shoeItem2)
@@ -12,7 +16,6 @@ fun returnShoeList(): List<Item> {
     shoeList.add(shoeItem4)
     val shoeItem5 = Item("Zapato 5", "https://example.com/zapato5.jpg", 109.99)
     shoeList.add(shoeItem5)
-
     val shoeItem6 = Item("Zapato 6", "https://example.com/zapato6.jpg", 89.99)
     shoeList.add(shoeItem6)
     val shoeItem7 = Item("Zapato 7", "https://example.com/zapato7.jpg", 199.99)
@@ -24,3 +27,4 @@ fun returnShoeList(): List<Item> {
     val shoeItem10 = Item("Zapato 10", "https://example.com/zapato10.jpg", 149.99)
     shoeList.add(shoeItem10)
     return shoeList
+}
